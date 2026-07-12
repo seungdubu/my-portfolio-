@@ -42,6 +42,9 @@
     .ed-grid p{font-size:13px;margin:0;color:#454c58}
     .ed-num{display:inline-block;background:var(--yellow);border:1.5px solid var(--ink);padding:0 6px;font-weight:900}
     .ed-quote{border-left:4px solid var(--mint2);background:var(--mint);padding:11px 14px;font-size:12.5px;margin-top:16px;color:#1d5c38}
+    .ed-shot{margin:16px 0 0}
+    .ed-shot img{display:block;width:100%;border:2px solid var(--ink);border-radius:12px;background:#0b192e}
+    .ed-shot figcaption{font:800 10.5px var(--mono);color:var(--muted);margin-top:6px;text-align:right}
     .ed-close{float:right;border:2px solid var(--ink);background:#fff;padding:4px 10px;font:900 11px var(--mono);cursor:pointer}
     .proj-meta{margin:12px 0 0;font-size:12.5px}
     .proj-meta dt{font:900 10px var(--mono);color:var(--pink2);margin-top:9px}
@@ -194,7 +197,7 @@
     </div>
 
     <div hidden id="d1">
-      <h3>온보딩 내비게이터 — 첫 3개월의 동행 설계</h3>
+      <h3>온보딩 네비게이터 — 첫 3개월의 동행 설계</h3>
       <p class="ed-meta">Edwards Lifesciences Korea · 2025.07 ~ 진행 중</p>
       <div class="ed-flow"><span>문제 인식</span><i>→</i><span>기획 · 매칭</span><i>→</i><span>운영 · 경청</span><i>→</i><span>분석 · 개선</span></div>
       <div class="ed-grid">
@@ -230,9 +233,13 @@
       <div class="ed-flow"><span>문제 정의</span><i>→</i><span>데이터 수집 · 선별</span><i>→</i><span>특성 분석 · 지표화</span><i>→</i><span>우수상</span></div>
       <div class="ed-grid">
         <div><div class="k">배경 (PROBLEM)</div><p>기존 어닝콜 서비스는 텍스트만 제공해, 경영진 발언의 신뢰도를 판단하기 어려웠다.</p></div>
-        <div><div class="k">업무 (SOLUTION)</div><p>어닝콜 음성·텍스트 데이터를 수집하고 화자 분리로 경영진 발언만 선별. 피치·에너지 등 음성 특성과 언어적 모호성을 분석해, 텍스트에 가려진 자신감과 불확실성을 수치화 — 투자 판단 지표로 구현. 개인 기여: 비정형 데이터 전처리 및 서비스 기획 담당</p></div>
+        <div><div class="k">업무 (SOLUTION)</div><p>어닝콜 음성·텍스트 데이터를 수집하고 화자 분리로 경영진 발언만 선별. 피치·에너지 등 음성 특성과 언어적 모호성을 분석해, 텍스트에 가려진 자신감과 불확실성을 수치화 — 투자 판단 지표로 구현. 개인 기여: 어닝콜 데이터 수집·전처리 및 음성 특성 분석·지표 설계 담당</p></div>
         <div class="r"><div class="k">결과 (RESULT)</div><p>기존에 놓치던 정보를 지표로 구현해 <span class="ed-num">우수상</span> 수상 (팀 성과)</p></div>
       </div>
+      <figure class="ed-shot">
+        <img src="dna_vdq.png" alt="VDQ 기반 어닝콜 분석 리포트 — 서비스 목업과 음성 분석 지표 화면" loading="lazy">
+        <figcaption>VDQ(Vocal Delivery Quality) 어닝콜 분석 리포트 — 팀 발표자료 중</figcaption>
+      </figure>
     </div>
     <div hidden id="d5">
       <h3>오피스 요가 재설계 — 일회성에서 일상으로</h3>
@@ -313,7 +320,7 @@
   </dialog>
 </section>
 
-<footer id="contact"><div class="container footer-grid"><div style="font-size:70px;text-align:center">🌳👩🏻‍💻</div><div class="footer-copy"><h2>NEXT STAGE <em>♥</em></h2><p>현대오토에버에서 더 큰 가치를 만들어가고 싶습니다.</p></div><div class="contact"><p>✉️ gofootsteps@email.com</p><p>☎️ 010-8273-1787</p><p>📍 gyeonggi, Korea</p></div></div><div class="footer-ground"></div><div class="copyright">© 2026 Seungmin. All rights reserved.</div><button class="to-top" id="toTop" type="button">TOP ↑</button></footer>
+<footer id="contact"><div class="container footer-grid"><div style="font-size:70px;text-align:center">🌳👩🏻‍💻</div><div class="footer-copy"><h2>NEXT STAGE <em>♥</em></h2><p>현대오토에버에서 더 큰 가치를 만들어가고 싶습니다.</p></div><div class="contact"><p>✉️ gofootsteps@gmail.com</p><p>☎️ 010-8273-1787</p><p>📍 gyeonggi, Korea</p></div></div><div class="footer-ground"></div><div class="copyright">© 2026 Seungmin. All rights reserved.</div><button class="to-top" id="toTop" type="button">TOP ↑</button></footer>
 <script>
  const progress=document.getElementById('progress');
  const links=[...document.querySelectorAll('.nav-links a')];
