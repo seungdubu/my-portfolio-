@@ -62,6 +62,33 @@
     .sg-items span.cert{background:var(--mint)}
     @media(max-width:760px){.skill-groups{grid-template-columns:1fr}}
 
+    
+    .glance{margin-top:34px;border:2px solid var(--ink);background:#fff;box-shadow:6px 6px 0 #d9d8d2}
+    .gl-row{display:grid;grid-template-columns:1fr 1.15fr;gap:18px;padding:22px 24px;border-bottom:2px dashed var(--line);align-items:center}
+    .gl-row:last-child{border-bottom:none}
+    .gl-key{font-size:19px;font-weight:900;line-height:1.45;letter-spacing:-.02em}
+    .gl-key em{font-style:normal;color:var(--pink2)}
+    .gl-list{list-style:none;margin:0;padding:0}
+    .gl-list li{display:flex;justify-content:space-between;gap:12px;align-items:baseline;font-size:13px;color:#4b525e;padding:7px 0;border-bottom:1px solid #eee}
+    .gl-list li:last-child{border-bottom:none}
+    .gl-list a{font:900 11px var(--mono);color:var(--pink2);text-decoration:none;white-space:nowrap;cursor:pointer}
+    .exp-sub{font:900 14px var(--mono);margin:34px 0 14px;display:flex;align-items:center;gap:10px}
+    .exp-sub:after{content:"";flex:1;border-top:2px dashed #c9c9c2}
+    .cards.two{grid-template-columns:repeat(2,1fr)}
+    .exp-card h3{font-size:17px}
+    .ed-flow{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 16px}
+    .ed-flow span{border:1.5px solid var(--ink);background:#FFF6E5;padding:5px 11px;font:800 11.5px var(--mono);box-shadow:2px 2px 0 rgba(23,23,23,.2)}
+    .ed-flow i{font-style:normal;font-weight:900}
+    .exp-modal .ex-body{padding:26px 24px;overflow:auto;max-height:70vh;background:#fff}
+    .exp-modal .ex-body h3{margin:0 0 4px;font-size:20px}
+    @media(max-width:760px){.gl-row{grid-template-columns:1fr}.cards.two{grid-template-columns:1fr}}
+
+    
+    .cards.three{grid-template-columns:repeat(3,1fr)}
+    .gl-foot{margin:0;padding:16px 24px;border-top:2px solid var(--ink);background:#FFF6E5;font-weight:900;font-size:14px;text-align:center}
+    @media(max-width:900px){.cards.three{grid-template-columns:1fr 1fr}}
+    @media(max-width:640px){.cards.three{grid-template-columns:1fr}}
+
     @media(max-width:980px){.hero-grid{grid-template-columns:1fr;gap:42px}.speech{right:20px}.cards{grid-template-columns:repeat(2,1fr)}.demo-grid{grid-template-columns:1fr 1fr}.skills{grid-template-columns:repeat(5,1fr)}.game-path{grid-template-columns:repeat(3,1fr)}.game-path:before{display:none}.stage:nth-child(even){margin-top:0}.footer-grid{grid-template-columns:1fr;text-align:center}.castle{text-align:center}.contact{text-align:center}}
     @media(max-width:720px){.container{width:min(100% - 26px,1180px)}.section{padding:72px 0}.nav-links{position:fixed;left:13px;right:13px;top:72px;background:#fff;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink);padding:18px;display:none;flex-direction:column;align-items:flex-start}.nav-links.open{display:flex}.menu-btn{display:block}.hero{padding-top:35px}.hero h1{font-size:44px}.speech{position:relative;right:auto;top:auto;margin:14px}.game-path{grid-template-columns:repeat(2,1fr);gap:34px 12px}.start-flag,.goal-flag{display:none}.cards,.demo-grid{grid-template-columns:1fr}.process{grid-template-columns:1fr}.arrow{transform:rotate(90deg);text-align:center}.skills{grid-template-columns:repeat(3,1fr)}.experience-head{align-items:flex-start;flex-direction:column}.video-window{box-shadow:5px 5px 0 var(--ink)}}
     @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;animation:none!important;transition:none!important}.reveal{opacity:1;transform:none}}
@@ -74,7 +101,7 @@
     <div class="brand"><small>HRD PORTFOLIO</small>SEUNGMIN CHO</div>
     <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기">☰</button>
     <div class="nav-links" id="navLinks">
-      <a href="#about">ABOUT</a><a href="#timeline">TIMELINE</a><a href="#experience">EXPERIENCE</a><a href="#demo">DEMO</a><a href="#skills">SKILL & TOOL</a><a href="#contact">CONTACT</a>
+      <a href="#about">ABOUT</a><a href="#timeline">TIMELINE</a><a href="#glance">SUMMARY</a><a href="#experience">EXPERIENCE</a><a href="#demo">DEMO</a><a href="#contact">CONTACT</a>
     </div>
   </div>
 </nav>
@@ -113,62 +140,129 @@
     <div class="timeline-message reveal">모든 경험은 '사람의 성장'을 설계하는 하나의 과정이었습니다.</div>
   </div>
 </section>
+<section class="section" id="glance">
+  <div class="container">
+    <h2 class="section-title reveal">📌 SUMMARY</h2>
+    <div class="glance reveal">
+      <div class="gl-row">
+        <div class="gl-key">데이터로 문제의 본질을 진단하고<br><em>최적의 솔루션을 설계</em>합니다.</div>
+        <ul class="gl-list">
+          <li><span>미래에셋 AI·데이터 페스티벌 — 음성 신뢰도 지표화 · 우수상</span><a href="#experience" data-open="d4">보기 ↓</a></li>
+          <li><span>AI 교육 사이클 — 현업 적용도 진단 → 실무형 2차 · President Award</span><a href="#experience" data-open="d2">보기 ↓</a></li>
+          <li><span>간식 소비 대시보드 — 직접 제작·운영 중</span><a href="#demo">보기 ↓</a></li>
+        </ul>
+      </div>
+      <div class="gl-row">
+        <div class="gl-key">상황과 사람을 읽어<br><em>상생의 협업 문화를 설계</em>합니다.</div>
+        <ul class="gl-list">
+          <li><span>온보딩 내비게이터 — 10명 중 9명 안정 정착</span><a href="#experience" data-open="d1">보기 ↓</a></li>
+          <li><span>Birkman 갈등 세션 — 다름의 이해와 건강한 피드백</span><a href="#experience" data-open="d6">보기 ↓</a></li>
+          <li><span>오피스 요가 재설계 — 글로벌 Applause Award</span><a href="#experience" data-open="d5">보기 ↓</a></li>
+        </ul>
+      </div>
+      <p class="gl-foot">이 두 힘으로, 구성원의 성장이 조직의 성과로 이어지는 학습을 설계합니다.</p>
+    </div>
+    <div class="skill-groups reveal" style="margin-top:26px">
+      <div class="sg"><h3>💻 컴퓨터 활용</h3><p class="sg-sub">데이터를 직접 추출·분석하고, 필요한 도구를 만듭니다.</p>
+        <div class="sg-items"><span>🗄️ SQL</span><span>📊 Tableau</span><span>📗 Excel</span><span>🐍 Python</span><span>✳️ Claude Code</span><span>🌀 Copilot</span></div>
+      </div>
+      <div class="sg"><h3>📜 교육 이수 · 자격</h3><p class="sg-sub">사람과 데이터, 양쪽을 검증된 방법으로 다룹니다.</p>
+        <div class="sg-items"><span class="cert">🧭 Birkman Level 1·2</span><span class="cert">🧩 DiSC Facilitator</span><span class="cert">📜 ADsP</span><span class="cert">📜 SQLD</span><span class="cert">📜 Tableau Desktop Foundation</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="experience">
   <div class="container">
-    <div class="experience-head"><div><h2 class="section-title reveal">🧑‍🤝‍🧑 EXPERIENCE</h2><p class="section-sub reveal">경험을 통해 성과를 만들었습니다.</p></div><p class="section-sub reveal">카드를 클릭해 상세 내용을 확인할 수 있어요! ✨</p></div>
-    <div class="cards reveal">
-      <article class="exp-card" data-detail="d1" role="button" tabindex="0"><small>Onboarding</small><h3>신규입사자 온보딩 내비게이터</h3><div class="card-icon">🧑‍🤝‍🧑</div><p><b>10명 중 9명, 3개월 이상 근속(약 90%).</b> 조기 퇴사의 신호를 들을 창구가 없던 조직에 3개월 동행 구조를 설계했습니다.</p><span class="more">+</span></article>
-      <article class="exp-card" data-detail="d2" role="button" tabindex="0"><small>HRD</small><h3>AI 교육 기획·평가 사이클</h3><div class="card-icon">📚</div><p><b>President Award.</b> 수요 진단→운영→측정→심화 2차 과정 개설까지, 교육의 전체 사이클을 운영했습니다.</p><span class="more">+</span></article>
-      <article class="exp-card" data-detail="d3" role="button" tabindex="0"><small>Culture &amp; Well-being</small><h3>오피스 요가 재설계</h3><div class="card-icon">🌱</div><p><b>글로벌 Applause Award.</b> 일회성 리프레시를 '지속가능한 스트레칭' 습관으로 재정의했습니다.</p><span class="more">+</span></article>
-      <article class="exp-card" data-detail="d4" role="button" tabindex="0"><small>Operation</small><h3>복지 운영 개선</h3><div class="card-icon">🍪</div><p><b>간식 할인율 5% → 25% 협상.</b> 같은 예산으로 더 다양한 구성, 구성원 만족도 상승으로 연결했습니다.</p><span class="more">+</span></article>
+    <div class="experience-head"><div><h2 class="section-title reveal">🧑‍🤝‍🧑 EXPERIENCE</h2><p class="section-sub reveal">성과와 목적으로 말하는 여섯 개의 경험.</p></div><p class="section-sub reveal">카드를 클릭해 상세 내용을 확인할 수 있어요! ✨</p></div>
+    <div class="exp-groups reveal">
+
+    <p class="exp-sub">📊 데이터로 문제의 본질을 진단하고, 솔루션을 설계합니다</p>
+    <div class="cards three">
+      <article class="exp-card" data-detail="d4" role="button" tabindex="0"><small>Data DNA · 미래에셋 페스티벌</small><h3>목소리에 숨은 신뢰도를 수치화하다 — 우수상</h3><div class="card-icon">🎙️</div><p>화자 분리와 음성 특성 분석으로, 텍스트에 가려진 자신감·불확실성을 투자 판단 지표로 구현.</p><span class="more">+</span></article>
+      <article class="exp-card" data-detail="d2" role="button" tabindex="0"><small>AI Learning Cycle</small><h3>만족도에 안주하지 않는 교육 — President Award</h3><div class="card-icon">📚</div><p>현업 적용도를 물어 원인을 찾고, 부서별 자료 전수 조사로 실무형 심화 과정을 재구성했습니다.</p><span class="more">+</span></article>
+      <article class="exp-card" data-detail="d3" role="button" tabindex="0"><small>Welfare Ops</small><h3>같은 예산으로 5배의 할인 — 비효율의 효율화</h3><div class="card-icon">🍪</div><p>업체의 타 서비스 이용 현황을 지렛대로 협상해 할인율 5%→25%, 구성원 만족도 상승.</p><span class="more">+</span></article>
     </div>
 
-    <div class="exp-detail reveal show" id="expDetail" aria-live="polite"></div>
+    <p class="exp-sub">🤝 상황과 사람을 읽어, 상생의 협업 문화를 설계합니다</p>
+    <div class="cards three">
+      <article class="exp-card" data-detail="d1" role="button" tabindex="0"><small>Onboarding Navigator</small><h3>첫 3개월의 동행 — 10명 중 9명이 남았습니다</h3><div class="card-icon">🧑‍🤝‍🧑</div><p>영업직·내근직의 환경 차이를 읽어 가이드라인을 유연화하고, 멘토의 부담을 덜었습니다.</p><span class="more">+</span></article>
+      <article class="exp-card" data-detail="d6" role="button" tabindex="0"><small>Team Communication</small><h3>다름을 아는 팀은, 피드백이 건강해집니다</h3><div class="card-icon">🧭</div><p>Birkman 세션과 회의 첫 5분의 희로애락 공유로 심리적 장벽을 낮췄습니다.</p><span class="more">+</span></article>
+      <article class="exp-card" data-detail="d5" role="button" tabindex="0"><small>Office Yoga</small><h3>일회성 요가를 일상 습관으로 — Applause Award</h3><div class="card-icon">🌱</div><p>"왜 하는가"를 다시 물어, 매트 요가를 의자 요가와 소도구로 재설계했습니다.</p><span class="more">+</span></article>
+    </div>
+
+    </div>
 
     <div hidden id="d1">
-      <button class="ed-close" type="button">닫기 ✕</button>
-      <h3>신규입사자 온보딩 내비게이터</h3>
-      <p class="ed-meta">Edwards Lifesciences Korea · [기간]</p>
+      <h3>온보딩 내비게이터 — 첫 3개월의 동행 설계</h3>
+      <p class="ed-meta">Edwards Lifesciences Korea · 2025.07 ~ 진행 중</p>
+      <div class="ed-flow"><span>문제 인식</span><i>→</i><span>기획 · 매칭</span><i>→</i><span>운영 · 경청</span><i>→</i><span>분석 · 개선</span></div>
       <div class="ed-grid">
-        <div><div class="k">PROBLEM</div><p>도입 전, 입사 1개월 내 조기 퇴사가 발생해도 원인을 들을 수 없었다. 영업/현장 부서별 진행 여건 차이도 컸다.</p></div>
-        <div><div class="k">ACTION</div><p>3개월 네비게이터 매칭 + 월별 구두 체크인. 부서별 가이드라인 유동화, 멘토의 첫 킥오프 부담을 낮추는 '마음카드' 지원도구 제작. 효과 측정용 랩업 설문 설계(시행 전).</p></div>
-        <div class="r"><div class="k">RESULT</div><p>3개월 리텐션 <span class="ed-num">약 90%</span> — 10명 중 9명 근속</p></div>
+        <div><div class="k">배경 (PROBLEM)</div><p>프로그램 도입 전, 입사 1~2개월 내 퇴사자가 발생해도 원인을 들을 창구가 없었다.</p></div>
+        <div><div class="k">업무 (SOLUTION)</div><p>3개월 네비게이터 매칭 후 구두로 운영 문제를 파악. 영업직·내근직의 근무 환경 차이를 고려해 가이드라인을 유연화하고, 멘토의 대화 주도 부담을 덜어줄 대화 카드(마음카드)를 제공. Wrap-up 미팅용 설문을 정교화해 운영상 어려움과 실질적 도움 요소를 추적하도록 설계(시행 전).</p></div>
+        <div class="r"><div class="k">결과 (RESULT)</div><p>약 1년간 신규 입사자 <span class="ed-num">10명 중 9명</span>이 안정적으로 조직에 정착</p></div>
       </div>
     </div>
     <div hidden id="d2">
-      <button class="ed-close" type="button">닫기 ✕</button>
-      <h3>AI 교육 기획·평가 사이클</h3>
-      <p class="ed-meta">Edwards Lifesciences Korea · [기간]</p>
+      <h3>AI 교육 기획·평가 사이클 — 만족도에 안주하지 않는 교육</h3>
+      <p class="ed-meta">Edwards Lifesciences Korea</p>
+      <div class="ed-flow"><span>니즈 파악</span><i>→</i><span>원인 진단</span><i>→</i><span>재구성 · 운영</span><i>→</i><span>분석 · 개선</span></div>
       <div class="ed-grid">
-        <div><div class="k">PROBLEM</div><p>구성원의 연령대·Copilot 활용도 편차가 커서 일괄 교육으로는 실무 적용이 어려웠다.</p></div>
-        <div><div class="k">ACTION</div><p>평상시 사용 수준을 먼저 파악 → 기능별 AI 툴 교육 설계 → 만족도와 심화 요청을 근거로 '실무 적용' 2차 과정 개설.</p></div>
-        <div class="r"><div class="k">RESULT</div><p><span class="ed-num">President Award</span> · 측정→재설계 루프로 이어진 2차 과정</p></div>
+        <div><div class="k">배경 (PROBLEM)</div><p>1차 교육의 만족도 점수는 높았지만, 학습이 실제 업무 변화로 이어지고 있는지는 알 수 없었다.</p></div>
+        <div><div class="k">업무 (SOLUTION)</div><p>설문으로 현업 적용도를 확인 — 구성원에게 필요한 것은 기능 설명이 아닌 '자기 업무 자료를 활용한 실습'임을 파악. 부서별 자료 형식과 활용 업무를 전수 조사한 뒤 강사와 협의해, Copilot·Excel 중심의 실무형 심화 과정으로 재구성.</p></div>
+        <div class="r"><div class="k">결과 (RESULT)</div><p><span class="ed-num">President Award</span> · 학습이 업무 변화로 이어지지 않는 원인을 찾아 개선한 경험</p></div>
       </div>
       <p class="ed-quote">"…the workshop was energizing and insightful, providing valuable perspectives…" — President Award 중</p>
     </div>
     <div hidden id="d3">
-      <button class="ed-close" type="button">닫기 ✕</button>
-      <h3>오피스 요가 재설계</h3>
-      <p class="ed-meta">Edwards Lifesciences Korea · [기간]</p>
+      <h3>복지 운영 개선 — 제한 예산 안의 임팩트</h3>
+      <p class="ed-meta">Edwards Lifesciences Korea</p>
+      <div class="ed-flow"><span>현황 분석</span><i>→</i><span>협상 준비</span><i>→</i><span>협상</span><i>→</i><span>반영 · 개선</span></div>
       <div class="ed-grid">
-        <div><div class="k">PROBLEM</div><p>하루 리프레시로 끝나는 일회성 웰니스는 남는 것이 없었다. "왜 하는가?"를 다시 물었다.</p></div>
-        <div><div class="k">ACTION</div><p>목적을 '지속가능한 스트레칭'으로 재정의 → 매트 요가를 의자 요가로 변경, 소도구 증정으로 일상 유지 설계, Viva Engage로 확산.</p></div>
-        <div class="r"><div class="k">RESULT</div><p>글로벌 <span class="ed-num">Applause Award</span> — 타 오피스에 영감을 준 사례</p></div>
+        <div><div class="k">배경 (PROBLEM)</div><p>고정 예산·고정 할인율(5%) 구조에서 간식 구성 다양화의 한계.</p></div>
+        <div><div class="k">업무 (SOLUTION)</div><p>회사가 해당 업체의 다른 서비스도 이용 중임을 파악, 이를 지렛대로 할인율 재협상. 확보한 여유분으로 품목 구성을 다양화.</p></div>
+        <div class="r"><div class="k">결과 (RESULT)</div><p>할인율 <span class="ed-num">5% → 25%</span> — 같은 예산으로 더 다양한 구성, 구성원 만족도 크게 향상</p></div>
+      </div>
+    </div>
+    <div hidden id="d4">
+      <h3>미래에셋 AI·데이터 페스티벌 — 우수상 (3인 팀, Data DNA)</h3>
+      <p class="ed-meta">HyperCLOVA X 활용 공모전</p>
+      <div class="ed-flow"><span>문제 정의</span><i>→</i><span>데이터 수집 · 선별</span><i>→</i><span>특성 분석 · 지표화</span><i>→</i><span>우수상</span></div>
+      <div class="ed-grid">
+        <div><div class="k">배경 (PROBLEM)</div><p>기존 어닝콜 서비스는 텍스트만 제공해, 경영진 발언의 신뢰도를 판단하기 어려웠다.</p></div>
+        <div><div class="k">업무 (SOLUTION)</div><p>어닝콜 음성·텍스트 데이터를 수집하고 화자 분리로 경영진 발언만 선별. 피치·에너지 등 음성 특성과 언어적 모호성을 분석해, 텍스트에 가려진 자신감과 불확실성을 수치화 — 투자 판단 지표로 구현. 개인 기여: 비정형 데이터 전처리 및 서비스 기획 담당</p></div>
+        <div class="r"><div class="k">결과 (RESULT)</div><p>기존에 놓치던 정보를 지표로 구현해 <span class="ed-num">우수상</span> 수상 (팀 성과)</p></div>
+      </div>
+    </div>
+    <div hidden id="d5">
+      <h3>오피스 요가 재설계 — 일회성에서 일상으로</h3>
+      <p class="ed-meta">Edwards Lifesciences Korea · 2026.02 ~ 진행 중</p>
+      <div class="ed-flow"><span>Why 재정의</span><i>→</i><span>재기획</span><i>→</i><span>실행</span><i>→</i><span>확산</span></div>
+      <div class="ed-grid">
+        <div><div class="k">배경 (PROBLEM)</div><p>원하는 사람만 참여하는 매트 요가 — "왜 하는가?"를 물었을 때, 목적은 리프레시가 아니라 구성원의 신체 능력 함양과 지속적 참여였다.</p></div>
+        <div><div class="k">업무 (SOLUTION)</div><p>업무 중에도 할 수 있는 의자 요가로 구성 변경, 소도구를 증정해 일상에서 이어지도록 설계. Viva Engage로 확산.</p></div>
+        <div class="r"><div class="k">결과 (RESULT)</div><p>전사 글로벌 웰빙에 공유, <span class="ed-num">Applause Award</span> — 타 오피스에 영감을 준 사례</p></div>
       </div>
       <p class="ed-quote">"…visible engagement like this helps increase awareness and participation in well-being initiatives." — Applause Award 중</p>
     </div>
-    <div hidden id="d4">
-      <button class="ed-close" type="button">닫기 ✕</button>
-      <h3>복지 운영 개선 — 간식 할인율 협상</h3>
-      <p class="ed-meta">Edwards Lifesciences Korea · [기간]</p>
+    <div hidden id="d6">
+      <h3>팀 갈등 해결 — 서로를 책임지는 팀으로</h3>
+      <p class="ed-meta">Edwards Lifesciences Korea · Birkman L1·2 / DiSC Facilitator</p>
+      <div class="ed-flow"><span>진단</span><i>→</i><span>세션 운영</span><i>→</i><span>실천 제안</span><i>→</i><span>전환</span></div>
       <div class="ed-grid">
-        <div><div class="k">PROBLEM</div><p>고정 예산·고정 할인율(5%) 구조에서 간식 다양성의 한계.</p></div>
-        <div><div class="k">ACTION</div><p>회사가 배송업체의 다른 서비스도 이용 중임을 파악, 이를 지렛대로 할인율 재협상.</p></div>
-        <div class="r"><div class="k">RESULT</div><p>할인율 <span class="ed-num">25%</span> — 같은 예산으로 더 다양한 간식, 만족도 상승</p></div>
+        <div><div class="k">배경 (PROBLEM)</div><p>업무 방식 차이로 갈등 — 요청의 의도와 기대 결과가 전달되지 않아 피드백 과정에서 오해가 쌓였다.</p></div>
+        <div><div class="k">업무 (SOLUTION)</div><p>버크만 진단 세션을 직접 열어 서로의 성향을 확인하고 원하는 바를 명확히 소통하도록 지원. 「혼자 리드하지 마라」의 사례를 적용해, 회의 첫 5분간 개인의 희로애락과 업무 상태를 나누는 실천법을 제안.</p></div>
+        <div class="r"><div class="k">결과 (RESULT)</div><p>불필요한 오해 감소, <span class="ed-num">건강한 피드백</span> — 맡은 일을 넘어 서로의 어려움까지 챙기는 팀으로 변화</p></div>
       </div>
     </div>
 
-    <div class="process reveal"><div class="step">Problem<br><small>문제 정의</small></div><div class="arrow">→</div><div class="step">Insight<br><small>원인 분석</small></div><div class="arrow">→</div><div class="step">Action<br><small>실행</small></div><div class="arrow">→</div><div class="step">Result<br><small>성과 측정</small></div><div class="arrow"></div></div>
+    <dialog class="demo-modal exp-modal" id="expModal">
+      <div class="dm-bar"><span class="dot"></span><span class="dot"></span><span class="dot"></span><span id="exTitle" style="margin-left:6px">EXPERIENCE</span><button type="button" id="exClose">닫기 ✕</button></div>
+      <div class="ex-body" id="exBody"></div>
+    </dialog>
+
+    <div class="process reveal"><div class="step">니즈 파악<br><small>듣고 관찰</small></div><div class="arrow">→</div><div class="step">기획<br><small>목적 재정의</small></div><div class="arrow">→</div><div class="step">운영<br><small>실행 · 조정</small></div><div class="arrow">→</div><div class="step">분석 · 개선<br><small>측정과 재설계</small></div><div class="arrow">🔁</div></div>
   </div>
 </section>
 <section class="section demo-section" id="demo">
@@ -219,35 +313,7 @@
     <iframe class="dm-frame" id="dmFrame" title="데모 미리보기" loading="lazy"></iframe>
   </dialog>
 </section>
-<section class="section" id="skills"><div class="container"><h2 class="section-title reveal">🧗 SKILL & TOOLS</h2><p class="section-sub reveal">직접 다루는 도구와, 검증된 학습의 기록입니다.</p>
-  <div class="skill-groups reveal">
-    <div class="sg"><h3>💻 컴퓨터 활용</h3><p class="sg-sub">데이터를 직접 추출·분석하고, 필요한 도구를 만듭니다.</p>
-      <div class="sg-items">
-        <span>🗄️ SQL</span>
-        <span>📊 Tableau</span>
-        <span>📗 Excel</span>
-        <span>🐍 Python</span>
-      </div>
-      <br>
-      <div class="sg-items">
-        <span>✳️ Claude Code</span>
-        <span>🌀 Copilot</span>
-      </div>
-    </div>
-    <div class="sg"><h3>📜 교육 이수 · 자격</h3><p class="sg-sub">사람과 데이터, 양쪽을 검증된 방법으로 다룹니다.</p>
-      <div class="sg-items">
-        <span class="cert">🧭 Birkman Level 1·2</span>
-        <span class="cert">🧩 DiSC Facilitator</span>
-      </div>
-      <br>
-      <div class="sg-items">
-        <span class="cert">📜 ADsP</span>
-        <span class="cert">📜 SQLD</span>
-        <span class="cert">📜 Tableau Desktop Foundation</span>
-      </div>
-    </div>
-  </div>
-</div></section>
+
 <footer id="contact"><div class="container footer-grid"><div style="font-size:70px;text-align:center">🌳👩🏻‍💻</div><div class="footer-copy"><h2>NEXT STAGE <em>♥</em></h2><p>현대오토에버에서 더 큰 가치를 만들어가고 싶습니다.</p></div><div class="contact"><p>✉️ gofootsteps@email.com</p><p>☎️ 010-8273-1787</p><p>📍 gyeonggi, Korea</p></div></div><div class="footer-ground"></div><div class="copyright">© 2026 Seungmin. All rights reserved.</div><button class="to-top" id="toTop" type="button">TOP ↑</button></footer>
 <script>
  const progress=document.getElementById('progress');
@@ -308,6 +374,36 @@
  var dmClose=document.getElementById('dmClose');
  if(dmClose) dmClose.addEventListener('click',function(){dmFrame.src='about:blank';dm.close?dm.close():dm.removeAttribute('open');});
  if(dm) dm.addEventListener('click',function(e){if(e.target===dm){dmFrame.src='about:blank';dm.close?dm.close():dm.removeAttribute('open');}});
+
+
+ // Experience 팝업 (Live Demo와 동일한 모달 방식)
+ var exModal=document.getElementById('expModal'),exBody=document.getElementById('exBody'),exTitle=document.getElementById('exTitle');
+ function openExp(key){
+   var src=document.getElementById(key);
+   if(!src||!exModal) return;
+   exBody.innerHTML=src.innerHTML;
+   var h=exBody.querySelector('h3'); if(h&&exTitle) exTitle.textContent='EXPERIENCE';
+   if(exModal.showModal) exModal.showModal(); else exModal.setAttribute('open','');
+ }
+ function closeExp(){ if(!exModal) return; exModal.close?exModal.close():exModal.removeAttribute('open'); }
+ document.querySelectorAll('.exp-card[data-detail]').forEach(function(card){
+   function go(){ openExp(card.getAttribute('data-detail')); }
+   card.addEventListener('click',go);
+   card.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();go();}});
+ });
+ var exClose=document.getElementById('exClose');
+ if(exClose) exClose.addEventListener('click',closeExp);
+ if(exModal) exModal.addEventListener('click',function(e){if(e.target===exModal) closeExp();});
+ // SUMMARY '보기' → 경험 섹션으로 스크롤 후 해당 팝업 자동 오픈
+ document.querySelectorAll('.gl-list a[data-open]').forEach(function(a){
+   a.addEventListener('click',function(e){
+     e.preventDefault();
+     var key=a.getAttribute('data-open');
+     var sec=document.getElementById('experience');
+     if(sec) sec.scrollIntoView({behavior:'smooth'});
+     setTimeout(function(){ openExp(key); }, 450);
+   });
+ });
 
 </script>
 </body></html>
